@@ -1,6 +1,5 @@
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
 
 
 public class WriteToFile {
@@ -9,7 +8,7 @@ public class WriteToFile {
             writer.write("<" + user.getSurname() + ">" + "<"
                     + user.getName() + ">" + "<"
                     + user.getPatronymic() + ">" + "<"
-                    + user.getDateOfBirth().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + ">" + "<"
+                    + user.getDateOfBirth() + ">" + "<"
                     + String.valueOf(user.getNumberOfTelephone()) + ">" + "<"
                     + user.getGender().toString() + ">");
             writer.write("\n");

@@ -1,16 +1,14 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class User {
     private String surname;
     private String name;
-
     private String patronymic;
-
     private LocalDate dateOfBirth;
-
     private String numberOfTelephone;
-
     private GenderType gender;
+
 
     public User(String surname, String name, String patronymic, LocalDate dateOfBirth,
                 String numberOfTelephone, GenderType gender) {
@@ -46,8 +44,8 @@ public class User {
         this.patronymic = patronymic;
     }
 
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public String getDateOfBirth() {
+        return dateOfBirth.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     public void setDateOfBirth(String dateOfBirth) {
